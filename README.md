@@ -16,10 +16,6 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
-    <br> 
-</p>
-
 ## 📝 Table of Contents
 
 - [About](#about)
@@ -27,7 +23,7 @@
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
-Simple Factory Method designed Python for Data Science design patterns
+Simple Factory Method designed Python for Data Science exercises
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
