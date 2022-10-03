@@ -1,9 +1,11 @@
 from termcolor import colored
+import pyfiglet
 class ListMethods:
     def __init__(self, acessories):
         self.acessories = acessories
     def start(self):
-        print(colored("\n\nMÉTODOS EM LISTAS\n", "cyan"))
+        result = pyfiglet.figlet_format("METODOS EM LISTAS", font = "smslant" )
+        print(colored(f"\n\n{result}\n", "cyan"))
         self.acessories.append('Airbag')
         self.acessories.sort() # organiza em ordem alfabética
         self.acessories.pop()
