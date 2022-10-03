@@ -1,10 +1,12 @@
 from termcolor import colored
+import pyfiglet
 class ListOps:
     def __init__(self, listA=['a', 'b', 'c'], listB=['d', 'e', 'f']):
         self.listA = listA
         self.listB = listB
     def start(self):
-        print(colored("\n\nOPERAÇÕES EM LISTAS\n", "cyan"))
+        result = pyfiglet.figlet_format("OPERACOES EM LISTAS", font = "smslant" )
+        print(colored(f"\n\n{result}\n", "cyan"))
         test1 = 'a' in self.listA
         print(f"a em lista: {test1}")
         print(f"Concatenação: {self.listA + self.listB}")

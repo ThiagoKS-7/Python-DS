@@ -6,6 +6,7 @@ from models.ListMethods import ListMethods
 from models.Loops import Loops
 from models.NestedLoops import NestedLoops
 from models.Conditionals import Conditionals
+from models.NestedConditionals import NestedConditionals
 
 class ProgramFactory:
     def __init__(self, classes='all'):
@@ -31,7 +32,8 @@ class ProgramFactory:
                         ListMethods(acessories),
                         Loops(acessories),
                         NestedLoops(data),
-                        Conditionals() ])
+                        Conditionals(),
+                        NestedConditionals() ])
             p.start()
         else:
             p = Program(self.classes)
