@@ -18,3 +18,19 @@ class NestedLoops:
         print(colored("\nACESSORIOS SEM DUPLICATAS (LIST COMPREHENSION):", "green"))
         acessories = [set([item for list in self.data for item in list])]
         print(acessories)
+        print(colored("EXERCICIO:", "cyan"))
+        dados = [ 
+            ['A', 'B', 'C'],
+            ['D', 'E', 'F'],
+            ['G', 'H', 'I']
+        ]
+        result = []
+        for lista in dados:
+            for item in lista:
+                result.append(item)
+        print(result)
+        result_2 = []
+        for lista in dados:
+            result_2 += lista
+        print(result_2)
+        print([item for lista in dados for item in lista])
