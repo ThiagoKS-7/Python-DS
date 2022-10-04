@@ -1,12 +1,15 @@
-from models.Program import Program
-from models.MngFiles import MngFiles
-from models.MathOps import MathOps
-from models.ListOps import ListOps
-from models.ListMethods import ListMethods
-from models.Loops import Loops
-from models.NestedLoops import NestedLoops
-from models.Conditionals import Conditionals
-from models.NestedConditionals import NestedConditionals
+from models import (
+    Program as p,
+    MngFiles as mf,
+    MathOps as mo,
+    ListOps as lo,
+    ListMethods as lm,
+    Loops as l,
+    NestedLoops as nl,
+    Conditionals as c,
+    NestedConditionals as nc,
+    NumpyArrays as na
+)
 
 class ProgramFactory:
     def __init__(self, classes='all'):
@@ -26,15 +29,19 @@ class ProgramFactory:
                 ['Central multimídia', 'Teto panorâmico', 'Freios ABS', '4 X 4', 'Painel digital', 'Piloto automático', 'Bancos de couro', 'Câmera de estacionamento'],
                 ['Piloto automático', 'Controle de estabilidade', 'Sensor crepuscular', 'Freios ABS', 'Câmbio automático', 'Bancos de couro', 'Central multimídia', 'Vidros elétricos']
             ]
-            p = Program([ MngFiles(),
-                        MathOps(),
-                        ListOps(),
-                        ListMethods(acessories),
-                        Loops(acessories),
-                        NestedLoops(data),
-                        Conditionals(),
-                        NestedConditionals() ])
-            p.start()
+            classes = [ 
+                mf.MngFiles(),
+                mo.MathOps(),
+                lo.ListOps(),
+                lm.ListMethods(acessories),
+                l.Loops(acessories),
+                nl.NestedLoops(data),
+                c.Conditionals(),
+                nc.NestedConditionals(),
+                na.NumpyArrays(data)
+            ]
+            prog = p.Program(classes)
+            prog.start()
         else:
-            p = Program(self.classes)
-            p.start()
+            prog = p.Program(self.classes)
+            prog.start()
